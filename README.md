@@ -5,7 +5,7 @@
 </div>
 
 <br>
-<h2>Web site responsivo</h2>
+<h2>Responsive Web site</h2>
 <p>Linguagens utilizadas:</p>
 <ul>
    <li>HTML</li>
