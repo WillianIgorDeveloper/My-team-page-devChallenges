@@ -144,4 +144,13 @@ footer p {
     .card:nth-child(5) {
         margin-top: 3rem;
     }
+
+    /*===== Transitions =====*/
+    .card {
+        transition: transform .3s;
+        transition-timing-function: ease-in-out;
+    }
+    .card:hover {
+        transform: scale(1.05, 1.05) rotate(3deg);
+    }
 }
