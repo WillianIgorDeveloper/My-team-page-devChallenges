@@ -20,6 +20,9 @@
 
 
 /*========== Global ==========*/
+html {
+    scroll-behavior: smooth;
+}
 * {
     margin: 0;
     padding: 0;
@@ -41,50 +44,51 @@ img {
 
 
 
-/*========== Main ==========*/
-main {
-    flex: 1;
-}
-main .text-container h1 {
+/*========== Header ==========*/
+header h1 {
     font-family: 'PT Serif', serif;
     font-weight: 700;
     font-size: 2.25rem;
     margin: 2.5rem 0;
 }
-main .subtext-container {
+header div {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
 }
-main .subtext-container h2 {
+header div h2 {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: 1.25rem;
 }
-main .subtext-container p {
+header div p {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 1rem;
 }
 
 
-main .profile-card {
+/*========== Main ==========*/
+main {
+    flex: 1;
+}
+.card-container {
     display: grid;
     grid-template-columns: auto auto;
     justify-content: space-around;
     margin: 2.5rem 0;
     gap: 2rem;
 }
-main .profile-cards {
-    width: 11rem;
+.card {
+    width: 85%;
 }
-.profile-cards:nth-child(even) {
+.card:nth-child(even) {
     margin-top: 3rem;
 }
-main .profile-card-container {
+.card div {
     display: flex;
 }
-main .profile-card-container p {
+.card div p {
     writing-mode: vertical-rl;
     font-family: 'PT Serif', serif;
     font-weight: 400;
@@ -92,7 +96,7 @@ main .profile-card-container p {
     text-transform: uppercase;
     margin-left: 0.25rem;
 }
-main .profile-cards h3 {
+.card h3 {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: 1rem;
@@ -113,45 +117,31 @@ footer p {
 
 
 /*==================== 
-    Screens smaller than 375px
-====================*/
-@media (max-width: 375px) {
-    main .profile-card {
-        grid-template-columns: auto;
-    }
-    .profile-cards:nth-child(even) {
-        margin-top: 0;
-    }
-}
-
-
-
-/*==================== 
     Screens bigger than 600px
 ====================*/
 @media (min-width: 600px) {
     body {
-        padding: 1.25rem;
+        padding: 1.50rem;
     }
-    .text-container {
+    header {
         display: flex;
-        justify-content: space-around;
-        gap: 2rem;
+        justify-content: space-between;
+        gap: 2.5rem;
         margin: 5rem 0;
     }
-    main .text-container h1 {
+    header h1 {
         margin: 0;
     }
-    main .profile-card {
+    .card-container {
         grid-template-columns: auto auto auto;
     }
-    .profile-cards:nth-child(even) {
+    .card:nth-child(even) {
         margin-top: 0;
     }
-    .profile-cards:nth-child(2) {
+    .card:nth-child(2) {
         padding-top: 3rem;
     }
-    .profile-cards:nth-child(5) {
+    .card:nth-child(5) {
         margin-top: 3rem;
     }
 }
